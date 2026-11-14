@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://crev2inf1u6xe"]
 
 [ext_resource type="Script" uid="uid://bmywdi81mxvsx" path="res://scripts/main_menu.gd" id="1_qtdab"]
+[ext_resource type="FontFile" uid="uid://d24iu7ir2pyvl" path="res://fonts/UbuntuSans-VariableFont_wdth,wght.ttf" id="2_3tmrh"]
 [ext_resource type="Script" uid="uid://bvd5q7lu1jxjg" path="res://scripts/audio_control.gd" id="2_610dt"]
 [ext_resource type="Script" uid="uid://cxluo0pewjhss" path="res://scripts/fullscreen_control.gd" id="3_3tmrh"]
 [ext_resource type="Script" uid="uid://cq22trfc3dkdx" path="res://scripts/scale_control.gd" id="4_cvwki"]
@@ -82,6 +83,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
@@ -91,6 +93,7 @@ text = "Start"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
@@ -101,6 +104,7 @@ text = "Settings"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
@@ -122,6 +126,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 100
 text = "Bit-Bounce"
 vertical_alignment = 1
@@ -149,18 +154,20 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 40
 text = "Settings"
 horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="Options" unique_id=1422674880]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 218.0
+offset_left = 66.0
+offset_top = 229.0
 offset_right = 508.0
 offset_bottom = 302.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
@@ -180,7 +187,7 @@ offset_right = 223.0
 offset_bottom = 77.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 18
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer" unique_id=533257065]
 layout_mode = 2
@@ -188,6 +195,7 @@ theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer" unique_id=1609470720]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 30
 text = "Music volume"
 
@@ -206,15 +214,14 @@ script = ExtResource("2_610dt")
 [node name="Fullscreen Control" type="CheckButton" parent="Options/VBoxContainer" unique_id=1767498271]
 layout_mode = 2
 theme_override_constants/h_separation = 20
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 30
 text = "Full Screen"
 script = ExtResource("3_3tmrh")
 
-[node name="Scale Control" type="OptionButton" parent="Options/VBoxContainer/Fullscreen Control" unique_id=179384783]
-layout_mode = 0
-offset_top = 80.0
-offset_right = 446.0
-offset_bottom = 130.0
+[node name="Scale Control" type="OptionButton" parent="Options/VBoxContainer" unique_id=179384783]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3tmrh")
 theme_override_font_sizes/font_size = 30
 selected = 0
 item_count = 4
@@ -234,4 +241,4 @@ script = ExtResource("4_cvwki")
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_options_pressed"]
 [connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/Audio Control" to="Options/VBoxContainer/HBoxContainer/Audio Control" method="_on_value_changed"]
 [connection signal="toggled" from="Options/VBoxContainer/Fullscreen Control" to="Options/VBoxContainer/Fullscreen Control" method="_on_toggled"]
-[connection signal="item_selected" from="Options/VBoxContainer/Fullscreen Control/Scale Control" to="Options/VBoxContainer/Fullscreen Control/Scale Control" method="_on_item_selected"]
+[connection signal="item_selected" from="Options/VBoxContainer/Scale Control" to="Options/VBoxContainer/Scale Control" method="_on_item_selected"]
