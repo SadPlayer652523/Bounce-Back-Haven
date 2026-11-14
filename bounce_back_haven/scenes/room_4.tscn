@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dbgncfsja4leq"]
+[gd_scene format=4 uid="uid://dkpcxcmhxwwwv"]
 
 [ext_resource type="Texture2D" uid="uid://bq5fwk8iry6dp" path="res://assets/tiles.png" id="1_ccapj"]
 [ext_resource type="PackedScene" uid="uid://c67iq2jopu83j" path="res://scenes/characters/sonic.tscn" id="2_5d4n5"]
