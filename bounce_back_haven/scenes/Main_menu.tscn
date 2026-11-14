@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bvd5q7lu1jxjg" path="res://scripts/audio_control.gd" id="2_610dt"]
 [ext_resource type="Texture2D" uid="uid://bq5fwk8iry6dp" path="res://assets/tiles.png" id="2_cvwki"]
 [ext_resource type="Script" uid="uid://cxluo0pewjhss" path="res://scripts/fullscreen_control.gd" id="3_3tmrh"]
+[ext_resource type="AudioStream" uid="uid://bmh1kha2jxots" path="res://assets/Screen Saver.mp3" id="4_2w1r8"]
 [ext_resource type="Script" uid="uid://cq22trfc3dkdx" path="res://scripts/scale_control.gd" id="4_cvwki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2w1r8"]
@@ -201,6 +202,7 @@ text = "Bit-Bounce"
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1430597230]
+stream = ExtResource("4_2w1r8")
 autoplay = true
 
 [node name="Options" type="Panel" parent="." unique_id=422105987]
