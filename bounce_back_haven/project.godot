@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bounce Back Haven"
-run/main_scene="uid://boqruwspbnix4"
+run/main_scene="uid://crev2inf1u6xe"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -85,4 +85,4 @@ fullscreen={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
