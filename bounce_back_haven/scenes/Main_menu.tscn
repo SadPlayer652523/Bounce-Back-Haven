@@ -61,9 +61,6 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2w1r8")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0atvc"]
-modulate_color = Color(0.30323282, 0.30323282, 0.30323282, 1)
-
 [sub_resource type="FontVariation" id="FontVariation_oa1go"]
 base_font = ExtResource("3_jk1qb")
 variation_embolden = 0.3
@@ -83,40 +80,12 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 16
 border_color = Color(0.03650001, 0.71844184, 0.73, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5e4v"]
-bg_color = Color(1, 1, 1, 0)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0.5686275, 0.5686275, 0.5686275, 0.80784315)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pc006"]
-bg_color = Color(0.79624295, 0.796243, 0.7962429, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_787fc"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ihofj"]
 color = Color(1, 1, 1, 1)
 thickness = 7
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ehbya"]
-color = Color(0.9703726, 0.44749779, 4.813075e-06, 1)
+color = Color(0.49, 0.49, 0.49, 1)
 thickness = 7
 
 [node name="Main Menu" type="Control" unique_id=1172737188]
@@ -142,66 +111,22 @@ scale = Vector2(1.5, 1.5)
 tile_map_data = PackedByteArray("AAAAAAoAAAABAAAAAAABAAoAAAABAAAAAAACAAoAAAABAAAAAAADAAoAAAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAIAAoAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAoAAAABAAAAAAAPAAoAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAABAAAAAAASAAoAAAABAAAAAAATAAoAAAABAAAAAAAUAAoAAAABAAAAAAAVAAoAAAABAAAAAAAWAAoAAAABAAAAAAAXAAoAAAABAAAAAAAAAAsAAAABAAEAAAAAAAwAAAABAAEAAAAAAA0AAAABAAEAAAABAA0AAAABAAEAAAABAAwAAAABAAEAAAABAAsAAAABAAEAAAACAAsAAAABAAEAAAACAAwAAAABAAEAAAACAA0AAAABAAEAAAADAA0AAAABAAEAAAADAAwAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAEAAwAAAABAAEAAAAEAA0AAAABAAEAAAAFAAsAAAABAAEAAAAFAAwAAAABAAEAAAAFAA0AAAABAAEAAAAGAA0AAAABAAEAAAAGAAwAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAHAAwAAAABAAEAAAAHAA0AAAABAAEAAAAIAA0AAAABAAEAAAAIAAwAAAABAAEAAAAIAAsAAAABAAEAAAAJAAsAAAABAAEAAAAJAAwAAAABAAEAAAAJAA0AAAABAAEAAAAKAAsAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAAMAAsAAAABAAEAAAAMAAwAAAABAAEAAAAMAA0AAAABAAEAAAANAAsAAAABAAEAAAANAAwAAAABAAEAAAANAA0AAAABAAEAAAAOAAsAAAABAAEAAAAOAAwAAAABAAEAAAAOAA0AAAABAAEAAAAPAAsAAAABAAEAAAAPAAwAAAABAAEAAAAPAA0AAAABAAEAAAAQAAsAAAABAAEAAAAQAAwAAAABAAEAAAAQAA0AAAABAAEAAAARAAsAAAABAAEAAAARAAwAAAABAAEAAAARAA0AAAABAAEAAAASAAsAAAABAAEAAAASAAwAAAABAAEAAAASAA0AAAABAAEAAAATAAsAAAABAAEAAAATAAwAAAABAAEAAAATAA0AAAABAAEAAAAUAAsAAAABAAEAAAAUAAwAAAABAAEAAAAUAA0AAAABAAEAAAAVAAsAAAABAAEAAAAVAAwAAAABAAEAAAAVAA0AAAABAAEAAAAWAAsAAAABAAEAAAAWAAwAAAABAAEAAAAWAA0AAAABAAEAAAAXAAsAAAABAAEAAAAXAAwAAAABAAEAAAAXAA0AAAABAAEAAAAPAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAEAAAAQAAUAAAABAAAAAAARAAYAAAABAAEAAAASAAYAAAABAAEAAAATAAcAAAABAAEAAAAUAAcAAAABAAEAAAAVAAgAAAABAAEAAAAWAAgAAAABAAEAAAAXAAkAAAABAAEAAAAQAAYAAAABAAEAAAAQAAcAAAABAAEAAAAQAAgAAAABAAEAAAAQAAkAAAABAAEAAAARAAUAAAABAAAAAAARAAcAAAABAAEAAAARAAgAAAABAAEAAAARAAkAAAABAAEAAAASAAUAAAABAAAAAAASAAcAAAABAAEAAAASAAgAAAABAAEAAAASAAkAAAABAAEAAAATAAUAAAABAAAAAAATAAYAAAABAAEAAAATAAgAAAABAAEAAAATAAkAAAABAAEAAAAUAAUAAAABAAAAAAAUAAYAAAABAAEAAAAUAAgAAAABAAEAAAAUAAkAAAABAAEAAAAVAAUAAAABAAAAAAAVAAYAAAABAAEAAAAVAAcAAAABAAEAAAAVAAkAAAABAAEAAAAWAAUAAAABAAAAAAAWAAYAAAABAAEAAAAWAAcAAAABAAEAAAAWAAkAAAABAAEAAAAXAAUAAAABAAAAAAAXAAYAAAABAAEAAAAXAAcAAAABAAEAAAAXAAgAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_q4q5n")
 
-[node name="Background" type="Panel" parent="." unique_id=563441087]
+[node name="Screens" type="Control" parent="." unique_id=626766941]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_0atvc")
+mouse_filter = 1
 
-[node name="Main Buttons" type="VBoxContainer" parent="." unique_id=643059362]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -540.40625
-offset_top = -129.0
-offset_right = -315.0
-offset_bottom = 41.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Main" type="Control" parent="Screens" unique_id=787472392]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
 
-[node name="Start" type="Button" parent="Main Buttons" unique_id=1509482545]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("FontVariation_oa1go")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
-text = "START"
-alignment = 0
-
-[node name="Settings" type="Button" parent="Main Buttons" unique_id=248837520]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("FontVariation_oa1go")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
-text = "SETTINGS"
-alignment = 0
-
-[node name="Exit" type="Button" parent="Main Buttons" unique_id=223193937]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("FontVariation_oa1go")
-theme_override_font_sizes/font_size = 27
-theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
-text = "QUIT"
-alignment = 0
-
-[node name="Label" type="Label" parent="." unique_id=1931373491]
+[node name="Label" type="Label" parent="Screens/Main" unique_id=1931373491]
 layout_mode = 1
 offset_left = 35.0
 offset_top = 56.0
@@ -214,85 +139,129 @@ theme_override_font_sizes/font_size = 61
 text = "Bit-Bounce"
 vertical_alignment = 1
 
-[node name="Options" type="Panel" parent="." unique_id=422105987]
-visible = false
+[node name="Main Buttons" type="VBoxContainer" parent="Screens/Main" unique_id=643059362]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -278.0
-offset_top = -169.0
-offset_right = 290.0
-offset_bottom = 176.0
+offset_left = 15.59375
+offset_top = 175.0
+offset_right = 241.0
+offset_bottom = 345.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Options" unique_id=1710384115]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_jk1qb")
-theme_override_font_sizes/font_size = 40
-text = "Settings"
-horizontal_alignment = 1
-
-[node name="Back" type="Button" parent="Options" unique_id=1422674880]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 229.0
-offset_right = 508.0
-offset_bottom = 302.0
+[node name="Start" type="Button" parent="Screens/Main/Main Buttons" unique_id=1509482545]
+layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_jk1qb")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
-theme_override_styles/hover = SubResource("StyleBoxFlat_787fc")
-text = "Back"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "START"
+alignment = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options" unique_id=2126498617]
+[node name="Settings" type="Button" parent="Screens/Main/Main Buttons" unique_id=248837520]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "SETTINGS"
+alignment = 0
+
+[node name="Exit" type="Button" parent="Screens/Main/Main Buttons" unique_id=223193937]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "QUIT"
+alignment = 0
+
+[node name="Options" type="Control" parent="Screens" unique_id=239086242]
+layout_mode = 1
+anchors_preset = 0
+offset_top = -648.0
+offset_right = 1152.0
+mouse_filter = 1
+
+[node name="Label2" type="Label" parent="Screens/Options" unique_id=1285989959]
+layout_mode = 1
+offset_left = 35.0
+offset_top = 56.0
+offset_right = 353.0
+offset_bottom = 130.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_jk1qb")
+theme_override_font_sizes/font_size = 61
+text = "Options"
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Screens/Options" unique_id=1143495611]
+layout_mode = 0
+offset_left = 35.59375
+offset_top = 398.0
+offset_right = 260.59375
+offset_bottom = 438.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "BACK"
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screens/Options" unique_id=2126498617]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -223.0
-offset_top = -127.5
-offset_right = 223.0
-offset_bottom = 77.5
+offset_left = -513.0
+offset_top = -122.5
+offset_right = -67.0
+offset_bottom = 82.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer" unique_id=533257065]
+[node name="HBoxContainer" type="HBoxContainer" parent="Screens/Options/VBoxContainer" unique_id=533257065]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer" unique_id=1609470720]
+[node name="Label" type="Label" parent="Screens/Options/VBoxContainer/HBoxContainer" unique_id=1609470720]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 30
-text = "Music volume"
+text = "Volume"
 
-[node name="Audio Control" type="HSlider" parent="Options/VBoxContainer/HBoxContainer" unique_id=1635336014]
+[node name="Audio Control" type="HSlider" parent="Screens/Options/VBoxContainer/HBoxContainer" unique_id=1635336014]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_styles/slider = SubResource("StyleBoxLine_ihofj")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_ehbya")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ehbya")
-max_value = 1.0
-step = 0.05
-value = 1.0
+step = 0.5
+value = 100.0
 script = ExtResource("5_lgwnu")
 
-[node name="Fullscreen Control" type="CheckButton" parent="Options/VBoxContainer" unique_id=1767498271]
+[node name="Fullscreen Control" type="CheckButton" parent="Screens/Options/VBoxContainer" unique_id=1767498271]
 layout_mode = 2
 theme_override_constants/h_separation = 20
 theme_override_fonts/font = ExtResource("3_jk1qb")
@@ -300,7 +269,7 @@ theme_override_font_sizes/font_size = 30
 text = "Full Screen"
 script = ExtResource("6_flqon")
 
-[node name="Scale Control" type="OptionButton" parent="Options/VBoxContainer" unique_id=179384783]
+[node name="Scale Control" type="OptionButton" parent="Screens/Options/VBoxContainer" unique_id=179384783]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 30
@@ -316,10 +285,10 @@ popup/item_3/text = "25%"
 popup/item_3/id = 3
 script = ExtResource("7_rcqid")
 
-[connection signal="pressed" from="Main Buttons/Start" to="." method="_on_start5_pressed"]
-[connection signal="pressed" from="Main Buttons/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Main Buttons/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Options/Back" to="." method="_on_back_options_pressed"]
-[connection signal="value_changed" from="Options/VBoxContainer/HBoxContainer/Audio Control" to="Options/VBoxContainer/HBoxContainer/Audio Control" method="_on_value_changed"]
-[connection signal="toggled" from="Options/VBoxContainer/Fullscreen Control" to="Options/VBoxContainer/Fullscreen Control" method="_on_toggled"]
-[connection signal="item_selected" from="Options/VBoxContainer/Scale Control" to="Options/VBoxContainer/Scale Control" method="_on_item_selected"]
+[connection signal="pressed" from="Screens/Main/Main Buttons/Start" to="." method="_on_start5_pressed"]
+[connection signal="pressed" from="Screens/Main/Main Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Screens/Main/Main Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Screens/Options/Back" to="." method="_on_back_options_pressed"]
+[connection signal="value_changed" from="Screens/Options/VBoxContainer/HBoxContainer/Audio Control" to="Screens/Options/VBoxContainer/HBoxContainer/Audio Control" method="_on_value_changed"]
+[connection signal="toggled" from="Screens/Options/VBoxContainer/Fullscreen Control" to="Screens/Options/VBoxContainer/Fullscreen Control" method="_on_toggled"]
+[connection signal="item_selected" from="Screens/Options/VBoxContainer/Scale Control" to="Screens/Options/VBoxContainer/Scale Control" method="_on_item_selected"]

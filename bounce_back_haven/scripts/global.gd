@@ -2,6 +2,8 @@ extends Node
 
 var volume = 100.0
 
+var current_level = 1
+
 func _ready() -> void:
 	pass
 
