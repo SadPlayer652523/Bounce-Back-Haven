@@ -134,7 +134,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0atvc")
 
 [node name="Main Buttons" type="VBoxContainer" parent="." unique_id=643059362]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -206,6 +205,7 @@ stream = ExtResource("4_2w1r8")
 autoplay = true
 
 [node name="Options" type="Panel" parent="." unique_id=422105987]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
