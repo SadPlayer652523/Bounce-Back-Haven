@@ -13,11 +13,11 @@ A concept for bouncing to get on platforms to complete puzzles
 - D to jump
 - Arrow keys to move
 - Down key to crouch
-- Down kry + D to Spindash
+- Down key + D to Spindash
 - A key in the air to bounce
 - Up Arrow key + A key to Trick Up
 
 # Credits & Copyright
-Demo Song: "Screen Saver" by Kevin MacLeod (incompetech.com)
 
-Licensed under Creative Commons: By Attribution 4.0 License
+Demo Song: "Screen Saver" by Kevin MacLeod ([incompetech.com](https://incompetech.com))
+Licensed under [Creative Commons: By Attribution 4.0](http://creativecommons.org/licenses/by/4.0/)
