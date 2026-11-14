@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bq5fwk8iry6dp" path="res://assets/tiles.png" id="1_ccapj"]
 [ext_resource type="PackedScene" uid="uid://c67iq2jopu83j" path="res://scenes/characters/sonic.tscn" id="2_5d4n5"]
-[ext_resource type="Texture2D" uid="uid://bthydqsj63cce" path="res://assets/Terrain (16x16).png" id="3_1sfdy"]
 [ext_resource type="Script" uid="uid://ybjr2k781rru" path="res://scripts/killzone.gd" id="3_6eqho"]
-[ext_resource type="Texture2D" uid="uid://3uu6kpr5ry51" path="res://assets/Screenshot 2026-11-14 161715.png" id="4_fkic7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23hl6"]
 texture = ExtResource("1_ccapj")
@@ -55,12 +53,18 @@ texture_region_size = Vector2i(32, 32)
 4:5/0 = 0
 5:5/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ccapj"]
+load_path = "res://.godot/imported/Terrain (16x16).png-08440d825000be5cd6a24cdf2c2e8ddf.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rb4hd"]
-texture = ExtResource("3_1sfdy")
+texture = SubResource("CompressedTexture2D_ccapj")
 texture_region_size = Vector2i(32, 32)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5d4n5"]
+load_path = "res://.godot/imported/Screenshot 2026-11-14 161715.png-5b05c28829036b96dd8c778b263678d6.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3cbqk"]
-texture = ExtResource("4_fkic7")
+texture = SubResource("CompressedTexture2D_5d4n5")
 texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_lfkbx"]
@@ -79,6 +83,10 @@ distance = -11.0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 6.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.12, 0.12, 0.12, 1)
