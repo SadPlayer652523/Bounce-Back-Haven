@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://crev2inf1u6xe"]
 
-[ext_resource type="Script" uid="uid://bmywdi81mxvsx" path="res://scripts/main_menu.gd" id="1_qtdab"]
-[ext_resource type="FontFile" uid="uid://d24iu7ir2pyvl" path="res://fonts/UbuntuSans-VariableFont_wdth,wght.ttf" id="2_3tmrh"]
-[ext_resource type="Script" uid="uid://bvd5q7lu1jxjg" path="res://scripts/audio_control.gd" id="2_610dt"]
-[ext_resource type="Texture2D" uid="uid://bq5fwk8iry6dp" path="res://assets/tiles.png" id="2_cvwki"]
-[ext_resource type="Script" uid="uid://cxluo0pewjhss" path="res://scripts/fullscreen_control.gd" id="3_3tmrh"]
-[ext_resource type="AudioStream" uid="uid://bmh1kha2jxots" path="res://assets/Screen Saver.mp3" id="4_2w1r8"]
-[ext_resource type="Script" uid="uid://cq22trfc3dkdx" path="res://scripts/scale_control.gd" id="4_cvwki"]
+[ext_resource type="Script" uid="uid://bmywdi81mxvsx" path="res://scripts/main_menu.gd" id="1_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bq5fwk8iry6dp" path="res://assets/tiles.png" id="2_tbmy8"]
+[ext_resource type="FontFile" uid="uid://d24iu7ir2pyvl" path="res://fonts/UbuntuSans-VariableFont_wdth,wght.ttf" id="3_jk1qb"]
+[ext_resource type="AudioStream" uid="uid://bmh1kha2jxots" path="res://assets/Screen Saver.mp3" id="4_5dd4i"]
+[ext_resource type="Script" uid="uid://bvd5q7lu1jxjg" path="res://scripts/audio_control.gd" id="5_lgwnu"]
+[ext_resource type="Script" uid="uid://cxluo0pewjhss" path="res://scripts/fullscreen_control.gd" id="6_flqon"]
+[ext_resource type="Script" uid="uid://cq22trfc3dkdx" path="res://scripts/scale_control.gd" id="7_rcqid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2w1r8"]
-texture = ExtResource("2_cvwki")
+texture = ExtResource("2_tbmy8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.799871, -16.063204, 16.007427, -16.187284, 15.647709, 16.00743, -16.007427, 16.00743)
@@ -65,8 +65,27 @@ sources/0 = SubResource("TileSetAtlasSource_2w1r8")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0atvc"]
 modulate_color = Color(0.30323282, 0.30323282, 0.30323282, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_oa1go"]
+base_font = ExtResource("3_jk1qb")
+variation_embolden = 0.3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ajci"]
+content_margin_left = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbmy8"]
+content_margin_left = 30.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 16
+border_color = Color(0.14999999, 0.56, 0.75, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
+content_margin_left = 30.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 16
+border_color = Color(0.03650001, 0.71844184, 0.73, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5e4v"]
-bg_color = Color(1, 1, 1, 1)
+bg_color = Color(1, 1, 1, 0)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -101,14 +120,14 @@ thickness = 7
 color = Color(0.9703726, 0.44749779, 4.813075e-06, 1)
 thickness = 7
 
-[node name="MainMenu" type="Control" unique_id=1172737188]
+[node name="Main Menu" type="Control" unique_id=1172737188]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qtdab")
+script = ExtResource("1_oa1go")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=512705750]
 layout_mode = 1
@@ -121,7 +140,7 @@ color = Color(0.12, 0.12, 0.12, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1465221262]
 scale = Vector2(1.5, 1.5)
-tile_map_data = PackedByteArray("AAAAAAoAAAABAAAAAAABAAoAAAABAAAAAAACAAoAAAABAAAAAAADAAoAAAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAIAAoAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAoAAAABAAAAAAAPAAoAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAABAAAAAAASAAoAAAABAAAAAAATAAoAAAABAAAAAAAUAAoAAAABAAAAAAAVAAoAAAABAAAAAAAWAAoAAAABAAAAAAAXAAoAAAABAAAAAAAAAAsAAAABAAEAAAAAAAwAAAABAAEAAAAAAA0AAAABAAEAAAABAA0AAAABAAEAAAABAAwAAAABAAEAAAABAAsAAAABAAEAAAACAAsAAAABAAEAAAACAAwAAAABAAEAAAACAA0AAAABAAEAAAADAA0AAAABAAEAAAADAAwAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAEAAwAAAABAAEAAAAEAA0AAAABAAEAAAAFAAsAAAABAAEAAAAFAAwAAAABAAEAAAAFAA0AAAABAAEAAAAGAA0AAAABAAEAAAAGAAwAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAHAAwAAAABAAEAAAAHAA0AAAABAAEAAAAIAA0AAAABAAEAAAAIAAwAAAABAAEAAAAIAAsAAAABAAEAAAAJAAsAAAABAAEAAAAJAAwAAAABAAEAAAAJAA0AAAABAAEAAAAKAAsAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAAMAAsAAAABAAEAAAAMAAwAAAABAAEAAAAMAA0AAAABAAEAAAANAAsAAAABAAEAAAANAAwAAAABAAEAAAANAA0AAAABAAEAAAAOAAsAAAABAAEAAAAOAAwAAAABAAEAAAAOAA0AAAABAAEAAAAPAAsAAAABAAEAAAAPAAwAAAABAAEAAAAPAA0AAAABAAEAAAAQAAsAAAABAAEAAAAQAAwAAAABAAEAAAAQAA0AAAABAAEAAAARAAsAAAABAAEAAAARAAwAAAABAAEAAAARAA0AAAABAAEAAAASAAsAAAABAAEAAAASAAwAAAABAAEAAAASAA0AAAABAAEAAAATAAsAAAABAAEAAAATAAwAAAABAAEAAAATAA0AAAABAAEAAAAUAAsAAAABAAEAAAAUAAwAAAABAAEAAAAUAA0AAAABAAEAAAAVAAsAAAABAAEAAAAVAAwAAAABAAEAAAAVAA0AAAABAAEAAAAWAAsAAAABAAEAAAAWAAwAAAABAAEAAAAWAA0AAAABAAEAAAAXAAsAAAABAAEAAAAXAAwAAAABAAEAAAAXAA0AAAABAAEAAAAPAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAEAAAAQAAUAAAABAAAAAAARAAYAAAABAAEAAAASAAYAAAABAAEAAAATAAcAAAABAAEAAAAUAAcAAAABAAEAAAAVAAgAAAABAAEAAAAWAAgAAAABAAEAAAAXAAkAAAABAAEAAAAQAAYAAAABAAEAAAAQAAcAAAABAAEAAAAQAAgAAAABAAEAAAAQAAkAAAABAAEAAAARAAUAAAABAAAAAAARAAcAAAABAAEAAAARAAgAAAABAAEAAAARAAkAAAABAAEAAAASAAUAAAABAAAAAAASAAcAAAABAAEAAAASAAgAAAABAAEAAAASAAkAAAABAAEAAAATAAUAAAABAAAAAAATAAYAAAABAAEAAAATAAgAAAABAAEAAAATAAkAAAABAAEAAAAUAAUAAAABAAAAAAAUAAYAAAABAAEAAAAUAAgAAAABAAEAAAAUAAkAAAABAAEAAAAVAAUAAAABAAAAAAAVAAYAAAABAAEAAAAVAAcAAAABAAEAAAAVAAkAAAABAAEAAAAWAAUAAAABAAAAAAAWAAYAAAABAAEAAAAWAAcAAAABAAEAAAAWAAkAAAABAAEAAAAXAAUAAAABAAAAAAAXAAYAAAABAAEAAAAXAAcAAAABAAEAAAAXAAgAAAABAAEAAAD//wkAAAABAAEAAAD//wgAAAABAAEAAAD//wcAAAABAAEAAAD//wYAAAABAAEAAAD//wUAAAABAAEAAAD//wQAAAABAAEAAAD//wMAAAABAAEAAAD//wIAAAABAAEAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAEAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAEAAAAMAP//AAABAAEAAAANAP//AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAARAP//AAABAAEAAAASAP//AAABAAEAAAATAP//AAABAAEAAAAUAP//AAABAAEAAAAVAP//AAABAAEAAAAWAP//AAABAAEAAAAXAP//AAABAAEAAAAYAP//AAABAAEAAAAYAAAAAAABAAEAAAAYAAEAAAABAAEAAAAYAAYAAAABAAEAAAAYAAcAAAABAAEAAAAYAAgAAAABAAEAAAAYAAkAAAABAAEAAAAYAAoAAAABAAEAAAAYAAsAAAABAAEAAAAYAAwAAAABAAEAAAAYAA0AAAABAAEAAAD//woAAAABAAEAAAD//wsAAAABAAEAAAD//wwAAAABAAEAAAD//w0AAAABAAEAAAAYAAUAAAABAAAAAAAYAAIAAAACAAAAAAAYAAMAAAACAAEAAAAYAAQAAAACAAIAAAA=")
+tile_map_data = PackedByteArray("AAAAAAoAAAABAAAAAAABAAoAAAABAAAAAAACAAoAAAABAAAAAAADAAoAAAABAAAAAAAEAAoAAAABAAAAAAAFAAoAAAABAAAAAAAGAAoAAAABAAAAAAAHAAoAAAABAAAAAAAIAAoAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAoAAAABAAAAAAAPAAoAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAABAAAAAAASAAoAAAABAAAAAAATAAoAAAABAAAAAAAUAAoAAAABAAAAAAAVAAoAAAABAAAAAAAWAAoAAAABAAAAAAAXAAoAAAABAAAAAAAAAAsAAAABAAEAAAAAAAwAAAABAAEAAAAAAA0AAAABAAEAAAABAA0AAAABAAEAAAABAAwAAAABAAEAAAABAAsAAAABAAEAAAACAAsAAAABAAEAAAACAAwAAAABAAEAAAACAA0AAAABAAEAAAADAA0AAAABAAEAAAADAAwAAAABAAEAAAADAAsAAAABAAEAAAAEAAsAAAABAAEAAAAEAAwAAAABAAEAAAAEAA0AAAABAAEAAAAFAAsAAAABAAEAAAAFAAwAAAABAAEAAAAFAA0AAAABAAEAAAAGAA0AAAABAAEAAAAGAAwAAAABAAEAAAAGAAsAAAABAAEAAAAHAAsAAAABAAEAAAAHAAwAAAABAAEAAAAHAA0AAAABAAEAAAAIAA0AAAABAAEAAAAIAAwAAAABAAEAAAAIAAsAAAABAAEAAAAJAAsAAAABAAEAAAAJAAwAAAABAAEAAAAJAA0AAAABAAEAAAAKAAsAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAALAAsAAAABAAEAAAALAAwAAAABAAEAAAALAA0AAAABAAEAAAAMAAsAAAABAAEAAAAMAAwAAAABAAEAAAAMAA0AAAABAAEAAAANAAsAAAABAAEAAAANAAwAAAABAAEAAAANAA0AAAABAAEAAAAOAAsAAAABAAEAAAAOAAwAAAABAAEAAAAOAA0AAAABAAEAAAAPAAsAAAABAAEAAAAPAAwAAAABAAEAAAAPAA0AAAABAAEAAAAQAAsAAAABAAEAAAAQAAwAAAABAAEAAAAQAA0AAAABAAEAAAARAAsAAAABAAEAAAARAAwAAAABAAEAAAARAA0AAAABAAEAAAASAAsAAAABAAEAAAASAAwAAAABAAEAAAASAA0AAAABAAEAAAATAAsAAAABAAEAAAATAAwAAAABAAEAAAATAA0AAAABAAEAAAAUAAsAAAABAAEAAAAUAAwAAAABAAEAAAAUAA0AAAABAAEAAAAVAAsAAAABAAEAAAAVAAwAAAABAAEAAAAVAA0AAAABAAEAAAAWAAsAAAABAAEAAAAWAAwAAAABAAEAAAAWAA0AAAABAAEAAAAXAAsAAAABAAEAAAAXAAwAAAABAAEAAAAXAA0AAAABAAEAAAAPAAkAAAAAAAEAAAAPAAgAAAAAAAEAAAAPAAcAAAAAAAEAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAEAAAAQAAUAAAABAAAAAAARAAYAAAABAAEAAAASAAYAAAABAAEAAAATAAcAAAABAAEAAAAUAAcAAAABAAEAAAAVAAgAAAABAAEAAAAWAAgAAAABAAEAAAAXAAkAAAABAAEAAAAQAAYAAAABAAEAAAAQAAcAAAABAAEAAAAQAAgAAAABAAEAAAAQAAkAAAABAAEAAAARAAUAAAABAAAAAAARAAcAAAABAAEAAAARAAgAAAABAAEAAAARAAkAAAABAAEAAAASAAUAAAABAAAAAAASAAcAAAABAAEAAAASAAgAAAABAAEAAAASAAkAAAABAAEAAAATAAUAAAABAAAAAAATAAYAAAABAAEAAAATAAgAAAABAAEAAAATAAkAAAABAAEAAAAUAAUAAAABAAAAAAAUAAYAAAABAAEAAAAUAAgAAAABAAEAAAAUAAkAAAABAAEAAAAVAAUAAAABAAAAAAAVAAYAAAABAAEAAAAVAAcAAAABAAEAAAAVAAkAAAABAAEAAAAWAAUAAAABAAAAAAAWAAYAAAABAAEAAAAWAAcAAAABAAEAAAAWAAkAAAABAAEAAAAXAAUAAAABAAAAAAAXAAYAAAABAAEAAAAXAAcAAAABAAEAAAAXAAgAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_q4q5n")
 
 [node name="Background" type="Panel" parent="." unique_id=563441087]
@@ -134,78 +153,74 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0atvc")
 
 [node name="Main Buttons" type="VBoxContainer" parent="." unique_id=643059362]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.40625
-offset_top = -137.0
-offset_right = 225.40625
-offset_bottom = 137.0
+offset_left = -540.40625
+offset_top = -129.0
+offset_right = -315.0
+offset_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
 
 [node name="Start" type="Button" parent="Main Buttons" unique_id=1509482545]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3tmrh")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
-text = "Start"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "START"
+alignment = 0
 
 [node name="Settings" type="Button" parent="Main Buttons" unique_id=248837520]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3tmrh")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
-theme_override_styles/hover = SubResource("StyleBoxFlat_787fc")
-text = "Settings"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "SETTINGS"
+alignment = 0
 
 [node name="Exit" type="Button" parent="Main Buttons" unique_id=223193937]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3tmrh")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
-theme_override_styles/hover = SubResource("StyleBoxFlat_787fc")
-text = "Exit"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oa1go")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1ajci")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbmy8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oa1go")
+text = "QUIT"
+alignment = 0
 
 [node name="Label" type="Label" parent="." unique_id=1931373491]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -66.5
-offset_top = -236.0
-offset_right = 66.5
-offset_bottom = -213.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 35.0
+offset_top = 56.0
+offset_right = 353.0
+offset_bottom = 130.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_fonts/font = ExtResource("2_3tmrh")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_jk1qb")
+theme_override_font_sizes/font_size = 61
 text = "Bit-Bounce"
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1430597230]
-stream = ExtResource("4_2w1r8")
+stream = ExtResource("4_5dd4i")
 autoplay = true
 
 [node name="Options" type="Panel" parent="." unique_id=422105987]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -225,7 +240,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_3tmrh")
+theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 40
 text = "Settings"
 horizontal_alignment = 1
@@ -238,7 +253,7 @@ offset_right = 508.0
 offset_bottom = 302.0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_3tmrh")
+theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_h5e4v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pc006")
@@ -266,7 +281,7 @@ theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="Options/VBoxContainer/HBoxContainer" unique_id=1609470720]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3tmrh")
+theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 30
 text = "Music volume"
 
@@ -280,19 +295,19 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_ehbya")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("2_610dt")
+script = ExtResource("5_lgwnu")
 
 [node name="Fullscreen Control" type="CheckButton" parent="Options/VBoxContainer" unique_id=1767498271]
 layout_mode = 2
 theme_override_constants/h_separation = 20
-theme_override_fonts/font = ExtResource("2_3tmrh")
+theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 30
 text = "Full Screen"
-script = ExtResource("3_3tmrh")
+script = ExtResource("6_flqon")
 
 [node name="Scale Control" type="OptionButton" parent="Options/VBoxContainer" unique_id=179384783]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3tmrh")
+theme_override_fonts/font = ExtResource("3_jk1qb")
 theme_override_font_sizes/font_size = 30
 selected = 0
 item_count = 4
@@ -304,7 +319,7 @@ popup/item_2/text = "50%"
 popup/item_2/id = 2
 popup/item_3/text = "25%"
 popup/item_3/id = 3
-script = ExtResource("4_cvwki")
+script = ExtResource("7_rcqid")
 
 [connection signal="pressed" from="Main Buttons/Start" to="." method="_on_start5_pressed"]
 [connection signal="pressed" from="Main Buttons/Settings" to="." method="_on_settings_pressed"]
