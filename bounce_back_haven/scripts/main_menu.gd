@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_start5_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1.tscn")
+	get_tree().change_scene_to_file("res://scenes/room_1.tscn")
 
 
 func _on_settings_pressed() -> void:
