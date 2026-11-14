@@ -73,4 +73,4 @@ tile_map_data = PackedByteArray("AAAAAA0AAAABAAEAAAABAA0AAAABAAEAAAACAA0AAAABAAE
 tile_set = SubResource("TileSet_lfkbx")
 
 [node name="Sonic" parent="." unique_id=1812322069 instance=ExtResource("2_4et86")]
-position = Vector2(119, 430)
+position = Vector2(44, 561)
