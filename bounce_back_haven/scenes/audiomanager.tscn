@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cdpvuamkq46ys"]
+
+[ext_resource type="Script" uid="uid://c0iin01rkay3d" path="res://scripts/audiomanager.gd" id="1_ab2wy"]
+[ext_resource type="AudioStream" uid="uid://bmh1kha2jxots" path="res://assets/Screen Saver.mp3" id="2_ab2wy"]
+
+[node name="Audio Manager" type="Node" unique_id=1613804604]
+script = ExtResource("1_ab2wy")
+audio_bus_name = "1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=664697533]
+stream = ExtResource("2_ab2wy")
+autoplay = true
+parameters/looping = true
